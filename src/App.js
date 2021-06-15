@@ -34,7 +34,7 @@ function App() {
 }
 
 const handleJoin = ()=>{
-  const token2 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwLTE2MjM3NTYwMjkiLCJpc3MiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwIiwic3ViIjoiQUNhYzQ0MjZiODA3NmRiOWNjZTZjMjkyZmQzZjIwMjRjZiIsImV4cCI6MTYyMzc1OTYyOSwiZ3JhbnRzIjp7ImlkZW50aXR5IjoiYW1hbiIsInZpZGVvIjp7InJvb20iOiI0NTY3In19fQ.C2iHm0IuNlkcKQuSu9ZSNSP5wIL65AaHOA8jC0diSmQ"
+  const token2 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwLTE2MjM3NTczOTIiLCJpc3MiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwIiwic3ViIjoiQUNhYzQ0MjZiODA3NmRiOWNjZTZjMjkyZmQzZjIwMjRjZiIsImV4cCI6MTYyMzc2MDk5MiwiZ3JhbnRzIjp7ImlkZW50aXR5IjoibWl0ZXNoIiwidmlkZW8iOnsicm9vbSI6IjQ1NjcifX19.sC9lUACLm2zYrFbJpNkdF8ky0P96O-rW03xmKe94miI"
   connect(token2 , { name: '4567' }).then(room => {
   console.log(`Successfully joined a Room: ${room}`);
   room.on('participantConnected', participant => {
