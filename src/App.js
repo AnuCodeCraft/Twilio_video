@@ -9,7 +9,7 @@ dotenv.config()
 function App() {
   
   const handleConnet =() =>{
-  const token1 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwLTE2MjMyNTcwNjUiLCJpc3MiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwIiwic3ViIjoiQUNhYzQ0MjZiODA3NmRiOWNjZTZjMjkyZmQzZjIwMjRjZiIsImV4cCI6MTYyMzI2MDY2NSwiZ3JhbnRzIjp7ImlkZW50aXR5IjoiQW51cHJpeWEiLCJ2aWRlbyI6eyJyb29tIjoiNDU2NyJ9fX0.OX2unB577_R2y2LlQrC7g8L4LWeVNpnAHzbqwWRus6c"
+  const token1 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwLTE2MjM3NTU5ODIiLCJpc3MiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwIiwic3ViIjoiQUNhYzQ0MjZiODA3NmRiOWNjZTZjMjkyZmQzZjIwMjRjZiIsImV4cCI6MTYyMzc1OTU4MiwiZ3JhbnRzIjp7ImlkZW50aXR5IjoiQW51cHJpeWEiLCJ2aWRlbyI6eyJyb29tIjoiNDU2NyJ9fX0.1SUVI2AyJAG9T9xmj4HA60bDHVtwFnRAuw6JlhF2cEI"
   connect(token1 , { name:'4567' }).then(room => {
   console.log(`Successfully joined a Room: ${room}`);
   room.on('participantConnected', participant => {
@@ -34,18 +34,18 @@ function App() {
 }
 
 const handleJoin = ()=>{
-  const token2 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwLTE2MjMyNTcxNTYiLCJpc3MiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwIiwic3ViIjoiQUNhYzQ0MjZiODA3NmRiOWNjZTZjMjkyZmQzZjIwMjRjZiIsImV4cCI6MTYyMzI2MDc1NiwiZ3JhbnRzIjp7ImlkZW50aXR5IjoidGVzdDEyIiwidmlkZW8iOnsicm9vbSI6IjQ1NjcifX19.mUTOnUFdyVE5Uoikk_6abORglOSj2X9MXOut5IkM1eE"
-  connect(token2, { name: '4567' }).then(room => {
+  const token2 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwLTE2MjM3NTYwMjkiLCJpc3MiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwIiwic3ViIjoiQUNhYzQ0MjZiODA3NmRiOWNjZTZjMjkyZmQzZjIwMjRjZiIsImV4cCI6MTYyMzc1OTYyOSwiZ3JhbnRzIjp7ImlkZW50aXR5IjoiYW1hbiIsInZpZGVvIjp7InJvb20iOiI0NTY3In19fQ.C2iHm0IuNlkcKQuSu9ZSNSP5wIL65AaHOA8jC0diSmQ"
+  connect(token2 , { name: '4567' }).then(room => {
   console.log(`Successfully joined a Room: ${room}`);
   room.on('participantConnected', participant => {
   console.log(`A remote Participant connected: ${participant}`);
-  console.log(token2)
+  
    
   createLocalTracks({
     audio: true,
     video: { width: 640 }
   }).then(localTracks => {
-    return connect(process.env.tokenjoin, {
+    return connect(token2, {
       name: '4567',
       tracks: localTracks
     });
@@ -58,6 +58,8 @@ const handleJoin = ()=>{
   console.error(`Unable to connect to Room: ${error.message}`);
 });
   }
+
+    
   
   return (
     
