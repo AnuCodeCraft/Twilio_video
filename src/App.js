@@ -9,7 +9,7 @@ dotenv.config()
 function App() {
   
   const handleConnet =() =>{
-  const token1 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwLTE2MjM3NTU5ODIiLCJpc3MiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwIiwic3ViIjoiQUNhYzQ0MjZiODA3NmRiOWNjZTZjMjkyZmQzZjIwMjRjZiIsImV4cCI6MTYyMzc1OTU4MiwiZ3JhbnRzIjp7ImlkZW50aXR5IjoiQW51cHJpeWEiLCJ2aWRlbyI6eyJyb29tIjoiNDU2NyJ9fX0.1SUVI2AyJAG9T9xmj4HA60bDHVtwFnRAuw6JlhF2cEI"
+  const token1 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwLTE2MjM5MjE4MDYiLCJpc3MiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwIiwic3ViIjoiQUNhYzQ0MjZiODA3NmRiOWNjZTZjMjkyZmQzZjIwMjRjZiIsImV4cCI6MTYyMzkyNTQwNiwiZ3JhbnRzIjp7ImlkZW50aXR5IjoibWl0ZXNoIiwidmlkZW8iOnsicm9vbSI6IjQ1NjcifX19.maG304x8OyxzOyEdK_KlhuuJ3vj5ThTXx_-s7_n50Gc"
   connect(token1 , { name:'4567' }).then(room => {
   console.log(`Successfully joined a Room: ${room}`);
   room.on('participantConnected', participant => {
@@ -34,7 +34,7 @@ function App() {
 }
 
 const handleJoin = ()=>{
-  const token2 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwLTE2MjM3NTczOTIiLCJpc3MiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwIiwic3ViIjoiQUNhYzQ0MjZiODA3NmRiOWNjZTZjMjkyZmQzZjIwMjRjZiIsImV4cCI6MTYyMzc2MDk5MiwiZ3JhbnRzIjp7ImlkZW50aXR5IjoibWl0ZXNoIiwidmlkZW8iOnsicm9vbSI6IjQ1NjcifX19.sC9lUACLm2zYrFbJpNkdF8ky0P96O-rW03xmKe94miI"
+  const token2 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwLTE2MjM5MjE4OTIiLCJpc3MiOiJTSzQzOWMzZGUwOTc5OTFiOGFiNzE4ZTcyMmY1YjRmMGQwIiwic3ViIjoiQUNhYzQ0MjZiODA3NmRiOWNjZTZjMjkyZmQzZjIwMjRjZiIsImV4cCI6MTYyMzkyNTQ5MiwiZ3JhbnRzIjp7ImlkZW50aXR5IjoiYXJtYW4iLCJ2aWRlbyI6eyJyb29tIjoiNDU2NyJ9fX0.nPfYaron5XnYQKsgChAIk8lKZUvzxGHk8U2-w1hK6pI"
   connect(token2 , { name: '4567' }).then(room => {
   console.log(`Successfully joined a Room: ${room}`);
   room.on('participantConnected', participant => {
